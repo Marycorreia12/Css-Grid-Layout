@@ -32,6 +32,29 @@ img {
     "footer footer footer";
 }
 
+@media (max-width: 1180px) {
+    .estrutura {
+        grid-template-areas: 
+        "header header header"
+        "sidenav content content"
+        "sidenav anuncios anuncios"
+        "footer footer footer";
+    }
+}
+
+
+@media (max-width: 743px) {
+    .estrutura {
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "header"
+        "sidenav" 
+        "content"
+        "anuncios"
+        "footer";
+    }
+}
+
 /*Header*/
 
 .header {
@@ -70,6 +93,21 @@ img {
     background: rgba(0,0,0,.5);
 }
 
+@media (max-width: 743px) {
+    .header {
+        grid-template-columns: auto;
+    }
+    .header .logo {
+        margin-bottom: 20px;
+    }
+    .header nav ul li a {
+        font-size: 16px;
+    }
+    .header nav ul li + li {
+        margin-left: 10px;
+    }
+}
+
 /*Sidenav*/
 
 .sidenav {
@@ -92,6 +130,42 @@ img {
 
 .sidenav li a:hover {
     background: #B07DFB;
+}
+
+@keyframes seta {
+    from {
+        right: 30px;
+    }
+    to {
+        right: 20px;
+    } 
+}
+
+@media (max-width: 743px) {
+    .sidenav {
+        position: relative;
+        padding: 0 30px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    .sidenav::after {
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0,0,0,.3);
+        animation: seta .5s ease-in infinite alternate;
+    }
+    .sidenav ul {
+        display: flex;
+    }
+    .sidenav ul li {
+        flex: 1 0 60px;
+    }
+    .sidenav ul li {
+        margin: 30px 30px 0 0;
+    }
 }
 
 /*Content*/
