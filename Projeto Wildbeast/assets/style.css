@@ -16,11 +16,10 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: 5px;
 }
-
 
 /*Grid Geral*/
 
@@ -107,7 +106,7 @@ img {
     grid-gap: 30px;
 }
 
-.col-wide {
+.content .col-wide {
     grid-column: 1 / -1;
 }
 
@@ -185,6 +184,41 @@ img {
     padding: 5px 0;
     position: relative;
     top: 2px;
+}
+
+.content .destaque {
+    font-size: 13.5px;
+    color: #B07DFB;
+    max-width: 230px;
+}
+
+/*Content *Citacacao_Atributos*/
+
+.content .citacao, .atributos {
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+    background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.content .citacao p {
+    font-size: 1.3em;
+    font-style: italic;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.content .atributos li {
+    color: white;
+    font-family: Courier, monospace;
+    font-size: 1.2em;
+    padding: 15px;
+}
+
+.content .atributos li + li {
+    border-top: 2px solid #B07DFB ;
 }
 
 /*Anuncios*/
